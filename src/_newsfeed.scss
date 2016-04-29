@@ -1,0 +1,23 @@
+.newsWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  display: flex;
+}
+
+.contentArea {
+  height: 400px;
+  display: flex;
+  flex: 1 0 250px;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.textArea {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
