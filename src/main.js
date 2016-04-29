@@ -1,9 +1,22 @@
 $(function(){
 
+
+    // fancy select/options
     $("#mySelect").selectBoxIt();
 
+
+    // on option select
     $('#mySelect').on('change',function() {
         event.preventDefault();
+
+
+  $( 'header' ).switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeInOutQuad" );
+
+
+
+      //  .switchClass( 'nyHeaderLarge', 'nyHeaderSmall', 1000, 'easeInOutQuad' );
+  //      $('header').removeClass('nyHeaderLarge');
+  //      $('header').addClass('nyHeaderSmall');
         $('.newsWrapper').empty();
         var sectionChoice = $('#mySelect').val();
         console.log(sectionChoice);

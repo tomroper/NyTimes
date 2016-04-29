@@ -142,7 +142,8 @@ h3 {
 
 .nyHeaderLarge {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  border-bottom: 1px solid #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
