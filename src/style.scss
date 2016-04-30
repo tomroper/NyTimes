@@ -4,6 +4,7 @@
 @import 'variables';
 @import 'fonts';
 @import 'header';
+@import 'loading';
 @import 'newsfeed';
 @import 'footer';
 
@@ -16,28 +17,28 @@ body {
 
 
 
-@media screen and (min-width: 600px) {
-  .nyHeaderSmall {
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-    margin-left: 22%;
-    padding-top: 1%;
-    padding-bottom: 1%; }
-  .nyMenu {
-    width: 71%;
-    justify-content: flex-start; }
-  .headh2 {
-    text-align: left; }
-  .logo {
-    height: 100px; }
-  .contentArea {
-    flex: 1 0 250px; } }
-
-@media screen and (min-width: 1000px) {
-  .nyHeaderSmall {
-    width: 30%;
-    margin-left: 2%; }
-  .contentArea {
-    flex: 1 0 25%; } }
+// @media screen and (min-width: 601px) {
+//   .nyHeaderSmall {
+//     flex-wrap: nowrap;
+//     justify-content: space-around;
+//     align-items: center;
+//     width: 50%;
+//     margin-left: 22%;
+//     padding-top: 1%;
+//     padding-bottom: 1%; }
+//   .nyMenu {
+//     width: 71%;
+//     justify-content: flex-start; }
+//   .headh2 {
+//     text-align: left; }
+//   .logo {
+//     height: 100px; }
+//   .contentArea {
+//     flex: 1 0 250px; } }
+//
+// @media screen and (min-width: 1000px) {
+//   .nyHeaderSmall {
+//     width: 30%;
+//     margin-left: 2%; }
+//   .contentArea {
+//     flex: 1 0 25%; } }

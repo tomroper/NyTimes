@@ -5,3 +5,19 @@ $openSans: 'open_sanslight', sans-serif;
 
 // Colours
 $backColor: #000;
+
+// Media Queries
+$tablet-width: 600px;
+$desktop-width: 1000px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

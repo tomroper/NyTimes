@@ -3,4 +3,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include desktop {
+    justify-content: flex-start;
+    margin-left: 5%;
+  };
 }
