@@ -1,20 +1,21 @@
 $(function(){
-
   // vars
   var sectionChoice;
   var selectedData;
   var imgUrl;
   var storyUrl;
   var headline;
-
     // fancy select/options
     $("#mySelect").selectBoxIt();
+    // hide loading gif
+    $('.loading_gif').show();
     // on option select
     $('#mySelect').on('change',function() {
         event.preventDefault();
         // smooth change between classes
-        $( 'header' ).switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeInOutQuad" );
+        $( 'header' ).switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeOutBounce" );
         $('.newsWrapper').empty();
+        $('.loading_gif').show();
         sectionChoice = $('#mySelect').val();
         console.log(sectionChoice);
         $.getJSON('http://api.nytimes.com/svc/topstories/v1/'+sectionChoice+'.json?api-key=4479d1b9820757b0491ca69a63423da6:13:75123737')
@@ -35,6 +36,9 @@ $(function(){
                     $('.contentItem'+index).css("background-image", "url('" + imgUrl.url + "')");
                 }) // .each
               } // close else statement
-          }); // done func
+          }) // done func
+          .always(function() {
+            //$('.loading_gif').hide();
+          })
     }); // select on change
 });// jQuery

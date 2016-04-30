@@ -1,3 +1,10 @@
+.loading_gif {
+  background: url('assets/images/ajax-loader.gif');
+  width: 10%;
+  display: block;
+  z-index: 5;
+}
+
 .newsWrapper {
   width: 100%;
   display: flex;
