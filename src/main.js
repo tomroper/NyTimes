@@ -1,24 +1,4 @@
 $(function(){
-<<<<<<< HEAD
-
-
-    // fancy select/options
-    $("#mySelect").selectBoxIt();
-
-
-    // on option select
-    $('#mySelect').on('change',function() {
-        event.preventDefault();
-
-
-  $( 'header' ).switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeInOutQuad" );
-
-
-
-      //  .switchClass( 'nyHeaderLarge', 'nyHeaderSmall', 1000, 'easeInOutQuad' );
-  //      $('header').removeClass('nyHeaderLarge');
-  //      $('header').addClass('nyHeaderSmall');
-=======
   // vars
   var sectionChoice;
   var selectedData;
@@ -34,7 +14,6 @@ $(function(){
         event.preventDefault();
         // smooth change between classes
         $( 'header' ).switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeOutBounce" );
->>>>>>> dev
         $('.newsWrapper').empty();
         $('.loading_gif').show();
         sectionChoice = $('#mySelect').val();
