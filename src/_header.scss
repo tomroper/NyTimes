@@ -8,10 +8,19 @@
   @include tablet {
       padding-bottom: 2%;
       justify-content: space-around;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+      margin-left: 20%;
+      padding-top: 1%;
+      // padding-bottom: 1%;
   };
   @include desktop {
       padding-bottom: 2%;
       justify-content: space-around;
+      width: 30%;
+      margin-left: 2%;
   };
 }
 
@@ -79,5 +88,6 @@
   justify-content: center;
   @include tablet {
     justify-content: flex-start;
+    width: 71%;
   };
 }

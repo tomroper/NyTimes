@@ -74,6 +74,17 @@ table {
   font-weight: normal;
   font-style: italic; }
 
+.headh2 {
+  font-family: "open_sanslight", sans-serif;
+  color: #ffffff;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .headh2 {
+      text-align: left; } }
+
 .error {
   font-family: "open_sanslight", sans-serif;
   font-style: italic;
@@ -81,21 +92,13 @@ table {
   color: #ffffff;
   margin: 0 auto; }
 
-.headh2 {
-  font-family: "open_sanslight", sans-serif;
-  color: #fff;
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: center; }
-
 .newsText {
   font-family: "open_sanslight", sans-serif;
   background-color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
   position: absolute;
   bottom: 0;
   text-align: left;
@@ -107,34 +110,12 @@ a:hover {
 
 h3 {
   font-family: "open_sanslight", sans-serif;
-  color: #c2c2c2;
-  font-size: 0.9rem; }
+  color: #c4c4c4;
+  font-size: #e6e6e6; }
 
-@media screen and (min-width: 600px) {
-  .nyHeaderSmall {
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-    margin-left: 20%;
-    padding-top: 1%;
-    padding-bottom: 1%; }
-  .nyMenu {
-    width: 71%;
-    justify-content: flex-start; }
-  .headh2 {
-    text-align: left; }
-  .logo {
-    height: 100px; }
-  .contentArea {
-    flex: 1 0 250px; } }
-
-@media screen and (min-width: 1000px) {
-  .nyHeaderSmall {
-    width: 30%;
-    margin-left: 2%; }
-  .contentArea {
-    flex: 1 0 25%; } }
+body {
+  background-color: #000;
+  font-size: 16px; }
 
 .nyHeaderSmall {
   height: auto;
@@ -145,11 +126,19 @@ h3 {
   @media (min-width: 600px) {
     .nyHeaderSmall {
       padding-bottom: 2%;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+      margin-left: 20%;
+      padding-top: 1%; } }
   @media (min-width: 1000px) {
     .nyHeaderSmall {
       padding-bottom: 2%;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      width: 30%;
+      margin-left: 2%; } }
 
 .nyHeaderLarge {
   width: 100%;
@@ -208,7 +197,8 @@ h3 {
   justify-content: center; }
   @media (min-width: 600px) {
     .nyMenu {
-      justify-content: flex-start; } }
+      justify-content: flex-start;
+      width: 71%; } }
 
 #loading_area {
   display: flex;
@@ -232,12 +222,16 @@ h3 {
   justify-content: center;
   background-size: cover;
   background-position: center; }
+  @media (min-width: 1000px) {
+    .contentArea {
+      flex: 1 0 25%; } }
 
 .textArea {
   display: block;
   width: 100%;
   position: relative;
-  height: auto; }
+  height: auto;
+  z-index: 5; }
 
 footer {
   height: 10vh;
@@ -248,7 +242,3 @@ footer {
     footer {
       justify-content: flex-start;
       margin-left: 5%; } }
-
-body {
-  background-color: #000;
-  font-size: 16px; }
