@@ -1,10 +1,12 @@
+$baseFontColor: #ffffff;
+
 .error {
   font-family: $openSans;
-  font-size: $baseFontSize * 2;
-  color: #c4c4c4;
+  font-style: italic;
+  font-size: $baseFontSize * 0.75;
+  color: $baseFontColor;
   margin: 0 auto;
 }
-
 
 .headh2 {
   font-family: $openSans;
@@ -17,16 +19,22 @@
 
 .newsText {
   font-family: $openSans;
+  background-color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
   color: #fff;
-  font-size: 1.2rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.5rem;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 98%;
+  text-align: left;
+  padding: 10px;
+  padding-right: 0px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $baseFontColor;
 }
 
 h3 {
