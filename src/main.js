@@ -31,14 +31,19 @@ $(function(){
                      headline = value.abstract;
                     $('.newsWrapper').append('<div class="contentArea contentItem'+index+'"><div class="textArea"><a href="'+storyUrl+'" target="_blank" class="newsText textId'+index+'">'+headline+'</a></div></div>');
                     $('.contentItem'+index).css("background-image", "url('" + imgUrl.url + "')");
-                    // Code to show/hide text on images
-                    $('.textId'+index).hide();
-                    $( '.contentItem'+index ).mouseover(function() {
-                      $( '.textId'+index ).fadeIn( 100 );
-                    });
-                    $( '.contentItem'+index ).mouseout(function() {
-                      $( '.textId'+index ).fadeOut( 100 );
-                    });
+                    // this if/else will load the articles abstract on a mobile device for a better UX.
+                    if (window.matchMedia('(min-width: 600px)').matches) {
+                      // Code to show/hide text on images
+                      $('.textId'+index).hide();
+                      $( '.contentItem'+index ).mouseover(function() {
+                        $( '.textId'+index ).fadeIn( 100 );
+                      });
+                      $( '.contentItem'+index ).mouseout(function() {
+                        $( '.textId'+index ).fadeOut( 100 );
+                      });
+                        } else {
+                          $('.textId'+index).show();
+                        }
                 }) // .each
               }; // close else statement
             }) // done func
