@@ -5,13 +5,14 @@ $(function(){
   var imgUrl;
   var storyUrl;
   var headline;
+
     // fancy select/options
     $("#mySelect").selectBoxIt();
     // on option select
     $('#mySelect').on('change',function() {
         event.preventDefault();
         $('header').switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeOutBounce" );   // smooth change between classes
-        $('.nyt_logo_before').switchClass( "nyt_logo_before", "nyt_logo_after", 0 );   // smooth change between classes
+        $('.nyt_logo_before').switchClass( "nyt_logo_before", "nyt_logo_after", 100 );   // smooth change between classes
         $('.newsWrapper').empty();    // clear any previous content
         $('#loading_area').append('<img class="loading_gif" src="assets/images/ajax-loader.gif" alt="loading">');   // show loading gif
         $sectionChoice = $('#mySelect').val(); // store the option value
@@ -22,14 +23,22 @@ $(function(){
               } else {
                   selectedData = data.results // change the value of selectedData to the results array
                   selectedData = selectedData.filter(function(item){ // checks if the result has images, and takes the first 12
-                                                    return item.multimedia.length
-                                                  }).splice(0,12);
+                                                      return item.multimedia.length
+                                                     }).splice(0,12);
                 $.each(selectedData, function (index, value) {
                      imgUrl = value.multimedia[4]; // using the large image files
                      storyUrl = value.url;
                      headline = value.abstract;
-                    $('.newsWrapper').append('<div class="contentArea contentItem'+index+'"><div class="textArea"><a href="'+storyUrl+'" target="_blank" class="newsText">'+headline+'</a></div></div>');
+                    $('.newsWrapper').append('<div class="contentArea contentItem'+index+'"><div class="textArea"><a href="'+storyUrl+'" target="_blank" class="newsText textId'+index+'">'+headline+'</a></div></div>');
                     $('.contentItem'+index).css("background-image", "url('" + imgUrl.url + "')");
+                    // Code to show/hide text on images
+                    $('.textId'+index).hide();
+                    $( '.contentItem'+index ).mouseover(function() {
+                      $( '.textId'+index ).fadeIn( 100 );
+                    });
+                    $( '.contentItem'+index ).mouseout(function() {
+                      $( '.textId'+index ).fadeOut( 100 );
+                    });
                 }) // .each
               }; // close else statement
             }) // done func
