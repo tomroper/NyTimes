@@ -11,7 +11,7 @@
   };
   @include desktop {
       padding-bottom: 2%;
-      justify-content: flex-start;
+      justify-content: space-around;
   };
 }
 
@@ -64,9 +64,8 @@
   max-width: 35%;
   margin-top: 35px;
   @include tablet {
-    min-height: 200px;
     max-width: 75px;
-    margin-top: 0px;
+    margin: 30px;
   };
 }
 
