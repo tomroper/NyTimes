@@ -12,7 +12,7 @@ $(function(){
     $('#mySelect').on('change',function() {
         event.preventDefault();
         $('header').switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeOutBounce" );   // smooth change between classes
-        $('.nyt_logo_before').switchClass( "nyt_logo_before", "nyt_logo_after", 0 );   // smooth change between classes
+        $('.nyt_logo_before').switchClass( "nyt_logo_before", "nyt_logo_after", 100 );   // smooth change between classes
         $('.newsWrapper').empty();    // clear any previous content
         $('#loading_area').append('<img class="loading_gif" src="assets/images/ajax-loader.gif" alt="loading">');   // show loading gif
         $sectionChoice = $('#mySelect').val(); // store the option value

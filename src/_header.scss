@@ -19,7 +19,7 @@
   @include desktop {
       padding-bottom: 2%;
       justify-content: space-around;
-      width: 30%;
+      width: 60%;
       margin-left: 2%;
   };
 }
@@ -51,9 +51,6 @@
     margin-bottom: 0;
     height: 30%;
   };
-  @include desktop {
-  };
-
 }
 
 .nyt_logo_before {

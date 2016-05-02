@@ -19,6 +19,7 @@
 }
 
 .newsText {
+  display: none;
   font-family: $openSans;
   background-color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
@@ -29,6 +30,10 @@
   bottom: 0;
   text-align: left;
   padding: 10px;
+}
+
+.newsText:hover {
+  display: block;
 }
 
 a:hover {
