@@ -5,7 +5,8 @@ $(function(){
   var imgUrl;
   var storyUrl;
   var headline;
-
+    //hide address bar on mobile
+    $('body').scrollTop(1);
     // fancy select/options
     $("#mySelect").selectBoxIt();
     // on option select
