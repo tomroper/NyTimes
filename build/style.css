@@ -98,10 +98,8 @@ table {
   line-height: 1.5rem;
   position: absolute;
   bottom: 0;
-  width: 98%;
   text-align: left;
-  padding: 10px;
-  padding-right: 0px; }
+  padding: 10px; }
 
 a:hover {
   text-decoration: none;
@@ -139,12 +137,15 @@ h3 {
     flex: 1 0 25%; } }
 
 .nyHeaderSmall {
-  width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 10%; }
+  @media (min-width: 600px) {
+    .nyHeaderSmall {
+      padding-bottom: 2%;
+      justify-content: space-around; } }
   @media (min-width: 1000px) {
     .nyHeaderSmall {
       padding-bottom: 2%;
@@ -183,7 +184,11 @@ h3 {
   @media (min-width: 600px) {
     .nyt_logo_before {
       min-height: 200px;
-      max-width: 25%; } }
+      max-width: 120px; } }
+  @media (min-width: 1000px) {
+    .nyt_logo_before {
+      min-height: 200px;
+      max-width: 160px; } }
 
 .nyt_logo_after {
   max-width: 35%;
@@ -191,7 +196,8 @@ h3 {
   @media (min-width: 600px) {
     .nyt_logo_after {
       min-height: 200px;
-      max-width: 25%; } }
+      max-width: 75px;
+      margin-top: 0px; } }
 
 .nyMenu {
   width: 35%;
