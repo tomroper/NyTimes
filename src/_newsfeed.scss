@@ -9,15 +9,19 @@
 .contentArea {
   height: 400px;
   display: flex;
-  flex: 1 0 250px;
+  flex: 1 0 300px;
   justify-content: center;
   background-size: cover;
   background-position: center;
+  @include desktop {
+    flex: 1 0 25%;
+  }
 }
 
-
 .textArea {
+  display: block;
   width: 100%;
   position: relative;
   height: auto;
+  z-index: 5;
 }

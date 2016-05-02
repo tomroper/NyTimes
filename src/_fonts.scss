@@ -1,83 +1,43 @@
-.error {
-  font-family: $openSans;
-  font-size: $baseFontSize * 2;
-  color: #c4c4c4;
-  margin: 0 auto;
-}
-
-
 .headh2 {
   font-family: $openSans;
-  color: #fff;
+  color: $baseFontColor;
   font-size: 0.8rem;
   margin-bottom: 10px;
   width: 100%;
   text-align: center;
+  @include tablet {
+    text-align: left;
+  }
+}
+
+.error {
+  font-family: $openSans;
+  font-style: italic;
+  font-size: $baseFontSize * 0.75;
+  color: $baseFontColor;
+  margin: 0 auto;
 }
 
 .newsText {
   font-family: $openSans;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: $baseFontColor;
+  font-size: $baseFontSize;
+  line-height: $baseFontSize * 1.5;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  text-align: left;
+  padding: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $baseFontColor;
 }
 
 h3 {
   font-family: $openSans;
-  color: #c2c2c2;
-  font-size: 0.9rem;
-}
-
-
-@media screen and (min-width: 600px) {
-
-  .nyHeaderSmall {
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-    margin-left: 20%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-  }
-
-  .nyMenu {
-    width: 71%;
-    justify-content: flex-start;
-  }
-
-  .headh2 {
-    text-align: left;
-  }
-
-  .logo {
-    height: 100px;
-  }
-
-  .contentArea {
-    flex: 1 0 250px;
-  }
-
-}
-
-@media screen and (min-width: 1000px) {
-
-  .nyHeaderSmall {
-    width: 30%;
-    margin-left: 2%;
-  }
-
-
-
-  .contentArea {
-    flex: 1 0 25%;
-  }
-
+  color: $footerFontColor;
+  font-size: $baseFontColor * 0.9;
 }
