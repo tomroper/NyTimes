@@ -13,7 +13,7 @@ $(function(){
         $('header').switchClass( "nyHeaderLarge", "nyHeaderSmall", 1000, "easeOutBounce" );   // smooth change between classes
         $('.nyt_logo_before').switchClass( "nyt_logo_before", "nyt_logo_after", 100 );   // smooth change between classes
         $('.newsWrapper').empty();    // clear any previous content
-        $('#loading_area').append('<img class="loading_gif" src="assets/images/ajax-loader.gif" alt="loading">');   // show loading gif
+        $('#loading_area').append('<img class="loading_gif" src="build/assets/images/ajax-loader.gif" alt="loading">');   // show loading gif
         $sectionChoice = $('#mySelect').val(); // store the option value
         $.getJSON('http://api.nytimes.com/svc/topstories/v1/'+$sectionChoice+'.json?api-key=4479d1b9820757b0491ca69a63423da6:13:75123737') // call the API using our variable
             .done(function(data) {
