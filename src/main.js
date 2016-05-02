@@ -22,7 +22,7 @@ $(function(){
               } else {
                   selectedData = data.results // change the value of selectedData to the results array
                   selectedData = selectedData.filter(function(item){ // checks if the result has images, and takes the first 12
-                                                      return item.multimedia.length
+                                                      return item.multimedia.length;
                                                      }).splice(0,12);
                 $.each(selectedData, function (index, value) {
                      imgUrl = value.multimedia[4]; // using the large image files

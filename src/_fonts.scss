@@ -31,7 +31,7 @@
   text-align: left;
   padding: 10px;
 }
-
+ 
 .newsText:hover {
   display: block;
 }
@@ -44,5 +44,5 @@ a:hover {
 h3 {
   font-family: $openSans;
   color: $footerFontColor;
-  font-size: $baseFontColor * 0.9;
+  font-size: $baseFontSize * 0.9;
 }
