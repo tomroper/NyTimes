@@ -1,10 +1,11 @@
-@import 'reset';
-@import 'fontface';
-@import 'variables';
-@import 'fonts';
+@import './partials/reset';
+@import './partials/fontface';
+@import './partials/variables';
+@import './partials/fonts';
 // Page sections
-@import 'body';
-@import 'header';
-@import 'loading';
-@import 'newsfeed';
-@import 'footer';
+@import './partials/body';
+@import './partials/header';
+@import './partials/loading';
+@import './partials/newsfeed';
+@import './partials/footer';
+ 
