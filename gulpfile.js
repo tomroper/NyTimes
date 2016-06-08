@@ -10,11 +10,12 @@ gulp.task('default', ['browser-sync']);
 gulp.task('browser-sync', function() {
     browserSync.init({
         open: false,
-        proxy: '192.168.33.10/project2'
+        proxy: '192.168.33.10/NyTimes'
     });
 
     gulp.watch("./src/*.js", ['babel']);
     gulp.watch('./src/*.scss', ['scss']);
+    gulp.watch('./src/partials/*.scss', ['scss']);
     gulp.watch(['./build/**/*.*', 'index.html']).on('change', browserSync.reload);
 });
 
